@@ -1,0 +1,299 @@
+@use "../../styles/variables" as *;
+
+.container {
+  width: min(1320px, 92%);
+  margin: auto;
+}
+
+.story,
+.mission,
+.values,
+.team,
+.cta {
+  padding: 110px 0;
+}
+
+.story {
+  background: white;
+}
+
+.story .container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.content span,
+.values span,
+.team span,
+.cta span {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #ffe9ea;
+  color: $primary;
+  font-weight: 600;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.content h2,
+.values h2,
+.team h2,
+.cta h2 {
+  font-size: clamp(34px, 5vw, 52px);
+  color: $text;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.content p,
+.cta p {
+  color: $text-light;
+  line-height: 1.9;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid $border;
+  border-radius: 24px;
+  padding: 36px;
+  transition: $transition;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+}
+
+.statCard svg {
+  color: $primary;
+  margin-bottom: 18px;
+}
+
+.statCard h3 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  color: $text;
+}
+
+.statCard p {
+  color: $text-light;
+}
+
+.statCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba($primary, 0.2);
+}
+
+.mission {
+  background: #fafafa;
+}
+
+.mission .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background: white;
+  padding: 50px;
+  border-radius: 28px;
+  border: 1px solid $border;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: $text;
+}
+
+.card p {
+  color: $text-light;
+  line-height: 1.9;
+}
+
+.values {
+  text-align: center;
+}
+
+.grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.valueCard {
+  background: white;
+  border: 1px solid $border;
+  border-radius: 24px;
+  padding: 42px 30px;
+  transition: $transition;
+}
+
+.valueCard svg {
+  color: $primary;
+  margin-bottom: 22px;
+}
+
+.valueCard h3 {
+  margin-bottom: 16px;
+  color: $text;
+}
+
+.valueCard p {
+  color: $text-light;
+  line-height: 1.8;
+}
+
+.valueCard:hover {
+  transform: translateY(-8px);
+  box-shadow: $shadow;
+}
+
+.team {
+  background: #fafafa;
+  text-align: center;
+}
+
+.teamGrid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.member {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  border: 1px solid $border;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: auto auto 24px;
+  background: linear-gradient(135deg, $primary, $primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.member h3 {
+  margin-bottom: 10px;
+  color: $text;
+}
+
+.member p {
+  color: $text-light;
+}
+
+.cta {
+  background: linear-gradient(135deg, #181818, #2b2b2b);
+  color: white;
+  text-align: center;
+}
+
+.cta span {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.cta h2,
+.cta p {
+  color: white;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 45px 0;
+}
+
+.features div {
+  font-weight: 500;
+}
+
+.cta button {
+  background: $primary;
+  color: white;
+  border: none;
+  padding: 18px 38px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $transition;
+}
+
+.cta button:hover {
+  transform: translateY(-4px);
+  background: $primary-dark;
+}
+
+@media (max-width: 1100px) {
+  .story .container,
+  .mission .container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid,
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .story,
+  .mission,
+  .values,
+  .team,
+  .cta {
+    padding: 80px 0;
+  }
+
+  .grid,
+  .teamGrid,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .card,
+  .member,
+  .valueCard,
+  .statCard {
+    padding: 32px;
+  }
+
+  .cta button {
+    width: 100%;
+    justify-content: center;
+  }
+}   

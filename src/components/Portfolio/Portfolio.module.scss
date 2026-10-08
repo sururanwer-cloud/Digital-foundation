@@ -1,0 +1,151 @@
+@use "../../styles/variables" as *;
+
+.portfolio {
+  background: white;
+}
+
+.container {
+  width: min(1320px, 92%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.left span {
+  color: $primary;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.left h2 {
+  margin: 25px 0;
+
+  font-size: 58px;
+  line-height: 1.05;
+}
+
+.left p {
+  color: #666;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.left button {
+  background: $primary;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border: none;
+  border-radius: 999px;
+
+  padding: 18px 32px;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.right {
+  position: relative;
+}
+
+.photoCard {
+  width: 100%;
+  height: 700px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: $shadow;
+}
+
+.photoCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.photoCard:hover img {
+  transform: scale(1.05);
+}
+
+.floating {
+  position: absolute;
+
+  bottom: 40px;
+  left: -40px;
+
+  width: 260px;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,.08);
+}
+
+.floating h3 {
+  color: $primary;
+  font-size: 48px;
+}
+
+.floating p {
+  margin-top: 10px;
+  color: #666;
+}
+
+@media(max-width:1100px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.left{
+
+order:2;
+
+}
+
+.right{
+
+order:1;
+
+}
+
+.floating{
+
+left:20px;
+
+}
+
+.left h2{
+
+font-size:46px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.photoCard{
+
+height:450px;
+
+}
+
+.left h2{
+
+font-size:36px;
+
+}
+
+}

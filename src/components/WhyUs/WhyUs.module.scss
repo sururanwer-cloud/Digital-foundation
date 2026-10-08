@@ -1,0 +1,218 @@
+@use "../../styles/variables" as *;
+
+.whyChoose {
+  padding: 120px 0;
+  background: $background;
+}
+
+.container {
+  width: min(1320px, 92%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba($primary, 0.08);
+  color: $primary;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.left h2 {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  color: $text;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.left h2 span {
+  color: $primary;
+}
+
+.description {
+  color: $text-light;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.showcase {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1f1f1f, #111);
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.showcaseBlurOne {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: rgba($primary, 0.18);
+  border-radius: 50%;
+  top: -120px;
+  left: -100px;
+  filter: blur(60px);
+}
+
+.showcaseBlurTwo {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background: rgba($primary, 0.12);
+  border-radius: 50%;
+  bottom: -110px;
+  right: -90px;
+  filter: blur(60px);
+}
+
+.showcaseBadge {
+  position: relative;
+  z-index: 2;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 26px;
+  background: rgba($primary, 0.15);
+  color: $primary;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcaseStat {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: clamp(3rem, 6vw, 4.2rem);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.showcaseLabel {
+  position: relative;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.showcaseDivider {
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: 2px;
+  background: rgba($primary, 0.5);
+  margin: 36px auto;
+}
+
+.showcaseMiniStats {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.showcaseMiniStats div {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 20px;
+}
+
+.showcaseMiniStats div:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.showcaseMiniStats span {
+  display: block;
+  color: $primary;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.showcaseMiniStats p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  gap: 20px;
+  padding: 28px;
+  background: $background;
+  border: 1px solid $border;
+  border-radius: $radius;
+  transition: $transition;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: $shadow;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  background: rgba($primary, 0.08);
+  color: $primary;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.card h3 {
+  color: $text;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.card p {
+  color: $text-light;
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whyChoose {
+    padding: 80px 0;
+  }
+
+  .left h2 {
+    font-size: 2rem;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .showcase {
+    padding: 44px 26px;
+  }
+}

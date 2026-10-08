@@ -1,0 +1,363 @@
+@use "../../styles/variables" as *;
+
+.container {
+  width: min(1320px, 92%);
+  margin: 0 auto;
+}
+
+/* ---------- Info Cards ---------- */
+
+.info {
+  padding: 70px 0 0;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.infoCard {
+  background: white;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: 36px 30px;
+  transition: $transition;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+}
+
+.infoCard:hover {
+  border-color: rgba($primary, 0.25);
+}
+
+.infoCard .icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: rgba($primary, 0.08);
+  color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.infoCard h3 {
+  font-size: 1.15rem;
+  color: $text;
+  margin-bottom: 10px;
+}
+
+.infoCard p {
+  color: $text-light;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* ---------- Contact Section ---------- */
+
+.contact {
+  padding: 100px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* ---------- Form Card ---------- */
+
+.formCard {
+  background: white;
+  border: 1px solid $border;
+  border-radius: 28px;
+  padding: 50px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba($primary, 0.08);
+  color: $primary;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.formCard h2 {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  color: $text;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  color: $text-light;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.field {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-weight: 600;
+  color: $text;
+  font-size: 0.92rem;
+  margin-bottom: 10px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  border: 1.5px solid $border;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: $text;
+  outline: none;
+  transition: $transition;
+  background: white;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: $primary;
+}
+
+.error {
+  color: $primary;
+  font-size: 0.82rem;
+  margin-top: 8px;
+}
+
+.submit {
+  background: $primary;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 18px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: $transition;
+}
+
+.submit:hover:not(:disabled) {
+  background: $primary-dark;
+  transform: translateY(-4px);
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.success {
+  text-align: center;
+  padding: 50px 20px;
+  color: $text;
+}
+
+.success svg {
+  color: $primary;
+  margin-bottom: 18px;
+}
+
+.success h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.success p {
+  color: $text-light;
+  line-height: 1.8;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* ---------- Side Panel ---------- */
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.sideCard {
+  background: linear-gradient(135deg, #1f1f1f, #111);
+  color: white;
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.sideCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: 22px;
+}
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reasons div {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.reasons svg {
+  color: $primary;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 30px 0;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: $transition;
+}
+
+.socials a:hover {
+  background: $primary;
+}
+
+.mapCard {
+  position: relative;
+  overflow: hidden;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: 24px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapPattern {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba($primary, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($primary, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+}
+
+.mapPin {
+  position: relative;
+  z-index: 2;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: $primary;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 10px rgba($primary, 0.12), 0 12px 25px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.mapLabel {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.mapLabel strong {
+  display: block;
+  color: $text;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.mapLabel span {
+  color: $text-light;
+  font-size: 0.85rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1100px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side {
+    flex-direction: row;
+  }
+
+  .sideCard,
+  .mapCard {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formCard {
+    padding: 32px 24px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .side {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,97 @@
+@use "../../styles/variables" as *;
+
+.faq {
+  padding: 120px 0;
+  background: $background;
+}
+
+.container {
+  width: min(1000px, 92%);
+  margin: auto;
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba($primary, 0.08);
+  color: $primary;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  color: $text;
+  margin-bottom: 15px;
+}
+
+h2 span {
+  color: $primary;
+}
+
+.subtitle {
+  color: $text-light;
+  margin-bottom: 60px;
+  line-height: 1.8;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.item {
+  border: 1px solid $border;
+  border-radius: $radius;
+  overflow: hidden;
+  transition: $transition;
+}
+
+.item.active {
+  box-shadow: $shadow;
+}
+
+.question {
+  width: 100%;
+  padding: 24px 28px;
+  background: $background;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: $text;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.answer {
+  padding: 0 28px 24px;
+}
+
+.answer p {
+  color: $text-light;
+  line-height: 1.8;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: $transition;
+}
+
+@media (max-width: 768px) {
+  .faq {
+    padding: 80px 0;
+  }
+
+  .question {
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  .answer {
+    padding: 0 20px 20px;
+  }
+}

@@ -1,0 +1,138 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  background: #111;
+  color: white;
+  padding-top: 80px;
+}
+
+.container {
+  width: min(1320px, 92%);
+  margin: auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 60px;
+  padding-bottom: 60px;
+}
+
+.brand img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.brand h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.brand span {
+  color: $primary;
+}
+
+.brand p {
+  color: #bdbdbd;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.top h3 {
+  margin-bottom: 20px;
+}
+
+.top a {
+  display: block;
+  text-decoration: none;
+  color: #bdbdbd;
+  margin-bottom: 14px;
+  transition: $transition;
+}
+
+.top a:hover {
+  color: white;
+}
+
+/* Declared after ".top a" so these overrides win the equal-specificity
+   tie-break — .socials sits inside .top, so ".top a" would otherwise
+   also match these icon links and reset their display/color/spacing. */
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 0;
+  transition: $transition;
+}
+
+.socials a:hover {
+  background: $primary;
+}
+
+.contactItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: #bdbdbd;
+  margin-bottom: 18px;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom p {
+  color: #bdbdbd;
+}
+
+.bottom div {
+  display: flex;
+  gap: 25px;
+}
+
+.bottom a {
+  text-decoration: none;
+  color: #bdbdbd;
+}
+
+.bottom a:hover {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom div {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

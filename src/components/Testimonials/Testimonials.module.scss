@@ -1,0 +1,98 @@
+@use "../../styles/variables" as *;
+
+.testimonials {
+  padding: 120px 0;
+  background: $surface;
+}
+
+.container {
+  width: min(1320px, 92%);
+  margin: auto;
+}
+
+.tag {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba($primary, .08);
+  color: $primary;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  color: $text;
+  margin-bottom: 15px;
+}
+
+h2 span {
+  color: $primary;
+}
+
+.subtitle {
+  max-width: 700px;
+  color: $text-light;
+  line-height: 1.8;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: $background;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: 35px;
+  transition: $transition;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: $shadow;
+}
+
+.stars {
+  color: #f5b301;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.review {
+  color: $text-light;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user h4 {
+  color: $text;
+  margin-bottom: 4px;
+}
+
+.user span {
+  color: $text-light;
+  font-size: .9rem;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
